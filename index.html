@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAMMPS Trajectory Parser</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>LAMMPS Trajectory Parser</h1>
+        <div>
+            <label for="fileInput">Upload LAMMPS Trajectory File (.lammpstrj):</label><br>
+            <input type="file" id="fileInput" accept=".lammpstrj">
+        </div>
+        <div>
+            <label for="startTimestep">Start Timestep:</label><br>
+            <input type="number" id="startTimestep" min="0" placeholder="Enter start timestep">
+        </div>
+        <div>
+            <label for="endTimestep">End Timestep:</label><br>
+            <input type="number" id="endTimestep" min="0" placeholder="Enter end timestep">
+        </div>
+        <button onclick="processFile()">Process File</button>
+        <div id="output"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
